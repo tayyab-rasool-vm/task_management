@@ -55,7 +55,7 @@ class TaskController extends Controller
             }
         }
         $tasks = $tasks->paginate(10);
-        return view('Admin.tasks.index', compact('tasks'));
+        return view('admin.tasks.index', compact('tasks'));
     }
 
     /**
@@ -66,7 +66,7 @@ class TaskController extends Controller
     public function create()
     {
         $occurrences = Occurrence::all();
-        return view('Admin.tasks.create', compact('occurrences'));
+        return view('admin.tasks.create', compact('occurrences'));
     }
 
     /**
@@ -105,7 +105,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        return view('Admin.tasks.show', compact('task'));
+        return view('admin.tasks.show', compact('task'));
     }
 
     /**
